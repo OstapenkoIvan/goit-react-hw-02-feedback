@@ -11,7 +11,11 @@ const BASIC_STATE = {
 };
 
 export class App extends Component {
-  static propTypes = {};
+  static propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+  };
 
   state = {
     ...BASIC_STATE,
@@ -36,6 +40,7 @@ export class App extends Component {
   };
 
   render() {
+    const { good, neutral, bad } = this.state;
     return (
       <>
         <Title title="Please leave your feedback">
@@ -47,9 +52,9 @@ export class App extends Component {
         <Title title="Statistics">
           <Statistics
             message="There is no fedback"
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
+            good={good}
+            neutral={neutral}
+            bad={bad}
             total={this.countTotalFeedback()}
             percentage={this.countPositiveFeedbackPercentage()}
           />
