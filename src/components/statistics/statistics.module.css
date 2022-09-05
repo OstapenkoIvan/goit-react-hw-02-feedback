@@ -1,0 +1,9 @@
+.statsThumb {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin: 0 auto;
+}
+.stat:not(:first-child) {
+  margin-top: 10px;
+}

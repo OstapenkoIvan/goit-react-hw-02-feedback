@@ -1,0 +1,8 @@
+.statBtn {
+  font-size: 16px;
+  width: 100px;
+}
+
+.statBtn:not(:last-child) {
+  margin-right: 15px;
+}
