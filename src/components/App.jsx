@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Feedback from './feedback/feedback';
-import { Title } from './title/title';
-import Statistics from './statistics/statistics';
+import Feedback from './Feedback/Feedback';
+import { Section } from './Section/Section';
+import Statistics from './Statistics/Statistics';
 
 const BASIC_STATE = {
   good: 0,
@@ -43,22 +43,22 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     return (
       <>
-        <Title title="Please leave your feedback">
+        <Section title="Please leave your feedback">
           <Feedback
             options={Object.keys(this.state)}
             onLeaveFeedback={this.onFeedbackStateChange}
           />
-        </Title>
-        <Title title="Statistics">
+        </Section>
+        <Section title="Statistics">
           <Statistics
-            message="There is no fedback"
+            message="There is no feedback"
             good={good}
             neutral={neutral}
             bad={bad}
             total={this.countTotalFeedback()}
             percentage={this.countPositiveFeedbackPercentage()}
           />
-        </Title>
+        </Section>
       </>
     );
   }
