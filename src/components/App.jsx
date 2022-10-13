@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Feedback from './Feedback/Feedback';
-import { Section } from './Section/Section';
-import Statistics from './Statistics/Statistics';
+import Feedback from 'components/Feedback/Feedback';
+import { Section } from 'components/Section/Section';
+import Statistics from 'components/Statistics/Statistics';
 
 const BASIC_STATE = {
   good: 0,
